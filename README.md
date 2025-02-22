@@ -14,35 +14,53 @@ Neste projeto, utilizei o recurso de **Automated ML** do Azure para prever o alu
 
 1. **Criação do Recurso no Azure**  
    O primeiro passo foi criar o recurso no portal do Azure para utilizar o serviço de **Machine Learning**.
-
-2. **Criação do Workspace**  
-   Dentro do portal do Azure, criei um **Workspace** para organizar e gerenciar todos os recursos e experimentos relacionados ao modelo de Machine Learning.
-
-3. **Acesso ao Automated ML**  
-   No **Workspace**, entrei na seção de **Automated ML** e selecionei a tarefa de **regressão** para a previsão do aluguel de bikes.
-
-4. **Upload de Dados**  
-   Para essa etapa, escolhi o **Azure Blob Storage** como a origem dos dados. Carreguei os dados históricos de aluguel de bicicletas no Blob Storage para treinamento do modelo.
-
-5. **Ajuste das Configurações**  
-   Ajustei as configurações da tarefa de regressão, conforme mostrado no print a seguir:
+   ![Criar recurso](prints/1.jpg)
    
-   ![Configuração da Tarefa de Regressão](link-da-imagem.jpg)
+3. **Criação do Workspace**  
+   Dentro do portal do Azure, criei um **Workspace** para organizar e gerenciar todos os recursos e experimentos relacionados ao modelo de Machine Learning.
+   ![Criar workspace](prints/2.jpg)
+   
+4. **Acesso ao Automated ML**  
+   No **Workspace**, entrei na seção de **Automated ML** e selecionei a tarefa de **regressão** para a previsão do aluguel de bikes e cliquei em CREATE para adicionar a base de dados historica.
+   ![Clicar em automated ML](prints/3.jpg)
+   ![Escolher Regressao](prints/5.jpg)
+   
+5. **Upload de Dados**  
+   Para essa etapa, escolhi o **Azure Blob Storage** como a origem dos dados. Carreguei os dados históricos de aluguel de bicicletas no Blob Storage para treinamento do modelo.
+   ![Tipo Tabluar](prints/6.jpg)
+   ![From local files](prints/7.jpg)
+   ![BlobStorage](prints/8.jpg)
 
-6. **Treinamento do Modelo**  
+6. **Ajuste dos dados**  
+   Ajustei as configurações da tabela dos dados:
+   ![Ajuste tabela](prints/10.jpg)
+
+7. **Ajuste da tarefa**  
+   Ajustei as configurações da tarefa:
+   ![Ajuste tarefa](prints/12.jpg)
+   ![Ajuste tarefa](prints/13.jpg)
+      
+8. **Treinamento do Modelo**  
    Após configurar, cliquei em **Create** para iniciar o treinamento do modelo. O **Azure Machine Learning** automaticamente ajustou os parâmetros e começou a treinar o modelo.
+![Completado](prints/14.jpg)
 
-7. **Registro do Modelo**  
-   Após o treinamento ser concluído, cliquei em **+ Register Model** para registrar o modelo gerado e torná-lo disponível para implantação.
+9. **Registro do Modelo**  
+   Após o treinamento ser concluído, cliquei em **+ Register Model** para registrar o modelo gerado e torná-lo disponível para implantação e ajustei algunmas informacoes.
+![Ajuste model](prints/15.jpg)
 
-8. **Acesso ao Modelo em Models**  
+10. **Acesso ao Modelo em Models**  
    Fui até a seção de **Models** para verificar o modelo registrado.
+![Models](prints/16.jpg)
 
-9. **Implantação do Modelo - Real-Time Endpoint**  
-   Na seção de **Deploy**, escolhi a opção de **Real-Time Endpoint** para configurar o modelo para previsões em tempo real. Ajustei as configurações de implantação conforme necessário.
+11. **Implantação do Modelo - Real-Time Endpoint**  
+   Cliquei em **Deploy**, escolhi a opção de **Real-Time Endpoint** para configurar o modelo para previsões em tempo real. Ajustei as configurações de implantação conforme necessário.
+![Deploy](prints/17.jpg)
+![Ajuste endpoint](prints/18.jpg)
 
-10. **Visualização do Endpoint**  
+12. **Visualização do Endpoint**  
     Por fim, fui até **Endpoints**, onde cliquei no item de endpoint recém-criado para visualizar e utilizar o modelo para previsões.
+![Endpoint](prints/19.jpg)
+![Succeed](prints/20.jpg)
 
 ---
 
